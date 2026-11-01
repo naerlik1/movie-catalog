@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+uploads/
+staticfiles/
+node_modules/
+dist/
+.DS_Store
+*.log
+.pytest_cache/
+assignment-extracted.txt
+artifacts/
