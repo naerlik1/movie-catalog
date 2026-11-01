@@ -1,0 +1,34 @@
+# Ubuntu Server для MacBook с Apple Silicon.
+minimumLimaVersion: 2.0.0
+base:
+  - template:_images/ubuntu-24.04
+vmType: vz
+arch: aarch64
+cpus: 2
+memory: 3GiB
+disk: 24GiB
+mounts: []
+containerd:
+  system: false
+  user: false
+user:
+  name: student
+  home: /home/student
+  uid: 1000
+ssh:
+  localPort: 22225
+  loadDotSSHPubKeys: false
+  forwardAgent: false
+  overVsock: false
+networks:
+  - vzNAT: true
+portForwards:
+  - guestPort: 8084
+    guestIP: 0.0.0.0
+    guestIPMustBeZero: true
+    proto: tcp
+    hostPort: 8084
+    hostIP: 0.0.0.0
+  - guestIP: 0.0.0.0
+    proto: any
+    ignore: true
