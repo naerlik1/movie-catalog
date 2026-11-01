@@ -143,7 +143,16 @@ docker compose exec app python manage.py test --noinput
 
 ## Для сдачи
 
-Готовые скриншоты основных экранов находятся в [docs/screenshots](docs/screenshots). Соответствие требованиям — [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md). Краткое объяснение кода для защиты — [docs/PROJECT.md](docs/PROJECT.md).
+Готовые скриншоты основных экранов находятся в [docs/screenshots](docs/screenshots). Соответствие требованиям — [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md).
+
+Материалы для подготовки к защите:
+
+- [Объяснения с нуля и вопросы по проекту](docs/QUESTIONS.md).
+- [Порядок показа в браузере, терминале и коде](docs/DEFENSE.md).
+- [Короткая памятка перед выступлением](docs/CHEATSHEET.md).
+- [Устройство проекта и путь запроса](docs/PROJECT.md).
+
+Для демонстрации загрузки изображения подготовлен [учебный постер](docs/demo-poster.png), скопированный из собственных демонстрационных обложек проекта. Сценарий использует отдельную запись «Фильм для защиты», которую создаёт демонстратор.
 
 GitHub и два личных публичных репозитория Docker-образов указаны выше и в [docs/PUBLICATION.md](docs/PUBLICATION.md). Ubuntu VM настроена, адрес и проверенные тестовые аккаунты указаны в этом README. Пользователь подтвердил открытие сайта с телефона в той же сети. Проверка именно со второго физического компьютера пока ожидается. Результаты проверок — в [docs/VERIFICATION.md](docs/VERIFICATION.md).
 
@@ -164,9 +173,14 @@ frontend/
   Dockerfile
   nginx.conf
 scripts/project.sh
+scripts/vm.sh
+vm/               конфигурация Ubuntu VM и установка Docker
 Запустить.command
 Остановить.command
 Обновить сборку.command
+Запустить VM.command
+Остановить VM.command
+SSH в VM.command
 docker-compose.yml
 .env.example
 docs/
